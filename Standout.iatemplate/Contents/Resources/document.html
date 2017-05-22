@@ -5,8 +5,15 @@
 	<link rel="stylesheet" media="all" href="style.css">
 
   <!-- Add support for Syntax highlighted code -->
-  <link rel="stylesheet" href="highlight/styles/monokai-sublime.css">
+  <link rel="stylesheet" href="highlight/styles/tomorrow.css">
+  <style>
+    /* Extra styling for higlight JS*/
+    code.hljs {
+      border-left: 3px solid #E42313;
+    }
+  </style>
   <script src="highlight/highlight.pack.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function(){
       document.body.addEventListener('ia-writer-change', function(event) {

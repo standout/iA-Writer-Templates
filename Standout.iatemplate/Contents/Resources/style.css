@@ -22,8 +22,6 @@ h2 {
   font-size: 32px;
 }
 h3 {
-  font-family: "Avenir Next", Lato, Helvetica, Arial, sans-serif;
-  font-weight: 500;
   font-size: 24px;
 }
 h4 {
@@ -34,12 +32,12 @@ h4 {
 h5 {
   font-family: "Avenir Next", Lato, Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
 }
 h6 {
   font-family: "Avenir Next", Lato, Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 11px;
 }
 p {
   margin: 0 0 20px 0;
@@ -77,6 +75,7 @@ blockquote {
   overflow: auto;
   word-break: normal;
   word-break: keep-all;
+  margin-bottom: 1em;
 }
 .markdown-body td,
 .markdown-body th {
@@ -101,6 +100,48 @@ blockquote {
 .markdown-body table tr:nth-child(2n) {
   background-color: #f8f8f8;
 }
+
+
+/**
+Lists
+*/
+
+
+li {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+ol {
+    counter-reset: item;
+    padding-left: 10px;
+}
+ol li {
+    display: block;
+}
+ol li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+}
+
+li.task-list-item {
+    list-style: none;
+}
+li.task-list-item .task-list-item-checkbox {
+    margin-right: 0.5em;
+    -webkit-appearance:none;
+    border: 1px solid black;
+    height: 1.1em;
+    width: 1.1em;
+    border-radius: 0.3em;
+    box-sizing: 
+    position: relative;
+    bottom: 0;
+    vertical-align: top;
+}
+li.task-list-item .task-list-item-checkbox:checked {
+    background: lightgreen;
+}
+
 
 @media screen {
   .markdown-body {
